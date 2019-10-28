@@ -31,7 +31,7 @@
           	<script>
           		var link = scan.content;
           	</script>
-            <li v-for="scan in scans" :key="scan.date" :title="scan.content"><a href="${link};">scan.content</a></li>
+            <li v-for="scan in scans" :key="scan.date" :title="scan.content"><a href="${link};">${link};</a></li>
             <!-- <li v-for="scan in scans" :key="scan.date" :title="scan.content"><a href="#" onclick="location.href = link; return false;">{{scan.content}}</a></li> -->
           </transition-group>
         </section>
