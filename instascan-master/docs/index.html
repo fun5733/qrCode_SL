@@ -28,7 +28,11 @@
             <li class="empty">No scans yet</li>
           </ul>
           <transition-group name="scans" tag="ul">
-            <li v-for="scan in scans" :key="scan.date" :title="scan.content"><a href={{scan.content}}>{{scan.content}}</a></li>
+          	<script>
+          		var link = scan.content;
+          	</script>
+            <!-- <li v-for="scan in scans" :key="scan.date" :title="scan.content"><a href={{scan.content}}>{{scan.content}}</a></li> -->
+            <li v-for="scan in scans" :key="scan.date" :title="scan.content"><a href="#" onclick="location.href = link; return false;">{{scan.content}}</a></li>
           </transition-group>
         </section>
       </div>
